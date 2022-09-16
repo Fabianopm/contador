@@ -1,64 +1,18 @@
     <!DOCTYPE html>
     <html>
     <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
     <title>My Count</title>
-    <style>
-        *{
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-        body{
-            min-height: 100vh;
-            background-color: black;
-            color: white;
-            display: grid;
-            place-items: center;
-        }
-
-        section{
-            background-color: rgba(255,255,255, 20%);
-            padding: 20px;
-            border-radius: 5px;
-            text-align: center;
-        }
-
-        p{
-            font-size: 100px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
-        <section>
-            <h1>Contador</h1>
-            <p id="resultado"></p>
-            <button onclick="diminuir()">menos</button>
-            <button onclick="aumentar()">mais</button>
-        </section> 
-        <script>
-
-            // estado da minha aplicação
-            let numero = 0;
-
-            // alteradores de estado da aplicação
-            function aumentar(){
-                numero++;
-                mostrarNaTela();
-            }
-
-            function diminuir(){
-               numero--;
-                mostrarNaTela();
-            }
-
-            //Jogar o estado da aplicação na tela
-            function mostrarNaTela(){
-                const p = document.querySelector("#resultado");
-                p.innerText = numero;
-            }
-
-            //Iniciar
-            mostrarNaTela();
-        </script>
+            <section>
+                <h1>Contador</h1>
+                <p id="resultado"></p>
+                <button class="dim" onclick="diminuir()">-1</button>
+                <button class="zer" onclick="zerar()">Zerar</button>
+                <button class="aum" onclick="aumentar()">+1</button>
+            </section>
+        <script src="index.js"></script>
     </body>
     </html>
